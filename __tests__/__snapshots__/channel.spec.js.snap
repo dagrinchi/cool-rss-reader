@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pages Channel Should match with snapshot 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 OHJVR"
+>
+  <header
+    className="AtAppBar__Container-um73xs-0 ibZoEd StyledBox-sc-13pk1d4-0 gXuzit"
+    style={
+      Object {
+        "zIndex": "1",
+      }
+    }
+  >
+    <button
+      className="AtButton__Button-sc-1xxhv8r-0 byhqJH StyledButton-sc-323bzc-0 lbUBVe"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="LinkPrevious"
+        className="StyledIcon-ofa7kd-0 jAaLrm"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M2,12 L22,12 M13,3 L22,12 L13,21"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+          transform="matrix(-1 0 0 1 24 0)"
+        />
+      </svg>
+    </button>
+    <h2
+      className="StyledHeading-sc-1rdh4aw-0 NPFk"
+    >
+      RSS Reader App
+    </h2>
+    <div
+      style={
+        Object {
+          "width": "48px",
+        }
+      }
+    />
+  </header>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+    style={
+      Object {
+        "marginTop": "70px",
+      }
+    }
+  >
+    <div
+      className="channel__Container-sc-1xf8zdf-0 hPizmf StyledBox-sc-13pk1d4-0 IRSNj"
+    >
+      <div
+        className="StyledBox-sc-13pk1d4-0 IRSNj"
+      >
+        <div
+          className="StyledBox-sc-13pk1d4-0 IRSNj"
+        >
+          <img
+            className="StyledImage-ey4zx9-0 knmSyL"
+            src="https://a.espncdn.com/i/espn/teamlogos/lrg/trans/espn_dotcom_black.gif"
+          />
+        </div>
+        <h1
+          className="heading StyledHeading-sc-1rdh4aw-0 fXzHqj"
+        >
+          www.espn.com - NBA
+        </h1>
+      </div>
+      <div
+        className="OrFeedGrid__Container-vere28-0 kPmued StyledBox-sc-13pk1d4-0 hVqWZj"
+      >
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 kCrWVa"
+        >
+          Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pages Index Should match with snapshot 1`] = `
+<div
+  className="StyledGrommet-sc-19lkkz7-0 OHJVR"
+>
+  <header
+    className="AtAppBar__Container-um73xs-0 ibZoEd StyledBox-sc-13pk1d4-0 gXuzit"
+    style={
+      Object {
+        "zIndex": "1",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "width": "48px",
+        }
+      }
+    />
+    <h2
+      className="StyledHeading-sc-1rdh4aw-0 NPFk"
+    >
+      RSS Reader App
+    </h2>
+    <button
+      className="AtButton__Button-sc-1xxhv8r-0 byhqJH StyledButton-sc-323bzc-0 lbUBVe"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="AddCircle"
+        className="StyledIcon-ofa7kd-0 jAaLrm"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,18 L12,6 M6,12 L18,12"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </header>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+    style={
+      Object {
+        "marginTop": "70px",
+      }
+    }
+  >
+    <div
+      className="pages__Container-sc-1a9uimp-0 gbFRCD StyledBox-sc-13pk1d4-0 IRSNj"
+    >
+      <h1
+        className="heading StyledHeading-sc-1rdh4aw-0 jVpYfH"
+      >
+        My Channels
+      </h1>
+      <div
+        className="OrChannelsGrid__Container-sc-3ncipi-0 gSdyxE StyledBox-sc-13pk1d4-0 hVqWZj"
+      >
+        <div
+          className="channel-card StyledBox-sc-13pk1d4-0 bgnYxf"
+        >
+          <div
+            className="MolChannelCard__ImgContainer-sc-1cgej23-0 edchsY StyledBox-sc-13pk1d4-0 iTXlKM"
+          >
+            <img
+              className="StyledImage-ey4zx9-0 knmSyL"
+              src="https://dummyimage.com/100x100/228BE6/fff.png"
+            />
+          </div>
+          <div
+            className="StyledBox-sc-13pk1d4-0 wgqfQ"
+          >
+            <a
+              className="StyledAnchor-sc-1rp7lwl-0 rHUSY"
+              href="javascript:void(0);"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <span
+                className="StyledText-sc-1sadyjn-0 kSbmHT"
+              >
+                ESPN - NBA
+              </span>
+            </a>
+            <span
+              className="StyledText-sc-1sadyjn-0 iQAYEN"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <button
+              className="remove-button AtButton__Button-sc-1xxhv8r-0 byhqJH StyledButton-sc-323bzc-0 lbUBVe"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              type="button"
+            >
+              <svg
+                aria-label="SubtractCircle"
+                className="StyledIcon-ofa7kd-0 iOkQrb"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M6,12 L18,12"
+                  fill="none"
+                  stroke="#000"
+                  strokeWidth="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          className="channel-card StyledBox-sc-13pk1d4-0 bgnYxf"
+        >
+          <div
+            className="MolChannelCard__ImgContainer-sc-1cgej23-0 edchsY StyledBox-sc-13pk1d4-0 iTXlKM"
+          >
+            <img
+              className="StyledImage-ey4zx9-0 knmSyL"
+              src="https://dummyimage.com/100x100/228BE6/fff.png"
+            />
+          </div>
+          <div
+            className="StyledBox-sc-13pk1d4-0 wgqfQ"
+          >
+            <a
+              className="StyledAnchor-sc-1rp7lwl-0 rHUSY"
+              href="javascript:void(0);"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <span
+                className="StyledText-sc-1sadyjn-0 kSbmHT"
+              >
+                Washington Post - Soccer
+              </span>
+            </a>
+            <span
+              className="StyledText-sc-1sadyjn-0 iQAYEN"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <button
+              className="remove-button AtButton__Button-sc-1xxhv8r-0 byhqJH StyledButton-sc-323bzc-0 lbUBVe"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              type="button"
+            >
+              <svg
+                aria-label="SubtractCircle"
+                className="StyledIcon-ofa7kd-0 iOkQrb"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M6,12 L18,12"
+                  fill="none"
+                  stroke="#000"
+                  strokeWidth="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
