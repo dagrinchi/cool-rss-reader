@@ -3,7 +3,6 @@ import fonts from './Fonts'
 import icons from './Icons'
 
 export default {
-  colors,
   fonts,
   icons,
   global: {
@@ -12,5 +11,6 @@ export default {
       size: '14px',
       height: '20px',
     },
+    colors
   },
 };

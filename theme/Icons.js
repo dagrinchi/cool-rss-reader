@@ -1,6 +1,8 @@
-import { Rss, AddCircle } from 'grommet-icons'
+import { Rss, AddCircle, SubtractCircle, LinkPrevious } from 'grommet-icons'
 
 export default  {
   Rss,
-  AddCircle
+  AddCircle,
+  SubtractCircle,
+  LinkPrevious
 }

@@ -1,11 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Box, Heading } from 'grommet'
 
 import Head from 'next/head'
 
+const Container = styled(Box)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+`
+
 const AtAppBar = (props) => (
-  <Box
+  <Container
     tag="header"
     direction="row"
     align="center"
@@ -17,14 +25,18 @@ const AtAppBar = (props) => (
   >
     <Head>
       <title>{props.title}</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Heading level="2" margin="none">{props.title}</Heading>
-    {props.children}
-  </Box>
+    { props.leftButton ? props.leftButton : <div style={{ width:"48px" }}></div>}
+    <Heading level="2" margin="none">{props.title}</Heading>    
+    { props.rightButton ? props.rightButton : <div style={{ width:"48px" }}></div> }
+  </Container>
 )
 
 AtAppBar.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  leftButton: PropTypes.object,
+  rightButton: PropTypes.object,
 }
 
 export default AtAppBar

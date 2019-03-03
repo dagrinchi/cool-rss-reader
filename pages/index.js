@@ -1,33 +1,34 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import Head from 'next/head'
 import nextCookie from 'next-cookies'
 import cookie from 'js-cookie'
-import Parser from 'rss-parser'
 import slugify from 'slugify'
 
-import { Box } from 'grommet'
-
-import theme from '../theme'
+import { Box, Heading } from 'grommet'
 
 import TplApp from '../components/TplApp/TplApp'
 import OrChannelsGrid from '../components/OrChannelsGrid/OrChannelsGrid'
 import OrNewChannel from '../components/OrNewChannel/OrNewChannel'
-import AtButton from '../components/AtButton/AtButton'
 
 const DEFAULT_CHANNELS = [
   {title:"ESPN - NBA", url:"http://www.espn.com/espn/rss/nba/news"},
   {title:"Washington Post - Soccer", url:"http://feeds.washingtonpost.com/rss/rss_soccer-insider"},
-  {title:"NYTimes - Football", url:"https://www.nytimes.com/services/xml/rss/nyt/ProFootball.xml"},
 ]
 
 const Container = styled(Box)`
+  .heading {
+    text-align: center;
+  }
   @media screen and (min-width: 1280px) {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-  }
 
+    .heading {
+      text-align: left;
+      margin-left: 1em;
+    }
+  }
   .button-container {
     align-self: center;
   }
@@ -35,30 +36,59 @@ const Container = styled(Box)`
 class IndexPage extends Component {
 
   state = { showAddNewChannelLayer: false };
+
+  _newChannelSubmit = (values) => {
+    const cookieChannels = cookie.get("channels")
+    let channels = []
+    if (cookieChannels) {
+      channels = JSON.parse(cookieChannels)
+    }
+
+    channels.push(values)
+    cookie.set("channels", JSON.stringify(channels), { expires: 30 })
+
+    if (window) {
+      window.location.reload();
+    }
+  };
+
+  _removeChannel = (index) => {
+    const cookieChannels = cookie.get("channels")
+    let channels = []
+    if (cookieChannels) {
+      channels = JSON.parse(cookieChannels)
+    }
+
+    channels.splice(index, 1)
+    if (channels.length > 0) {
+      cookie.set("channels", JSON.stringify(channels), { expires: 30 })
+    } else {
+      cookie.remove("channels")
+    }   
+
+    if (window) {
+      window.location.reload();
+    }
+  }
   
   static async getInitialProps(ctx) {
-    let qChannels = []
+    let channels = []
     const cookies = nextCookie(ctx)
     const isCookieChannels = !!cookies.channels
     if (isCookieChannels) {
-      qChannels = JSON.parse(cookies.channels)
+      channels = JSON.parse(cookies.channels)
     } else {
-      qChannels = DEFAULT_CHANNELS      
+      channels = DEFAULT_CHANNELS      
     }
     
-    let channels = []
-    for (let i = 0; i < qChannels.length; i++) {
-      const parser = new Parser()
-      try {
-        const feed = await parser.parseURL(qChannels[i].url)
-        channels.push({ ...feed, slug: slugify(feed.title, {
-          lower: true,
-          remove:   /\./i
-        }) })
-      } catch (err) {
-        console.log(err)
-      }          
-    }
+    channels = channels.map(c => ({
+      ...c,
+      slug: slugify(c.title, {
+        lower: true,
+        remove:   /\./i
+      })
+    }))
+
     return { channels, isCookieChannels }
   }
 
@@ -72,22 +102,12 @@ class IndexPage extends Component {
   render() {
     return (
       <Fragment>
-        <Head>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-        <theme.fonts.global />
-        <TplApp>
+        <TplApp onAddButton={() => this.setState({ showAddNewChannelLayer: true })}>
           <Container>
-            <OrChannelsGrid channels={this.props.channels} />
-            <Box width="small" className="button-container">
-              <AtButton
-                icon={<theme.icons.AddCircle />}
-                label="Add channel"
-                onClick={() => this.setState({ showAddNewChannelLayer: true })}
-                primary />  
-            </Box>     
+            <Heading level="1" className="heading">My Channels</Heading>
+            <OrChannelsGrid channels={this.props.channels} onRemoveButton={this._removeChannel} />
           </Container>     
-          { this.state.showAddNewChannelLayer && <OrNewChannel onClose={() => this.setState({ showAddNewChannelLayer: false })} /> }
+          { this.state.showAddNewChannelLayer && <OrNewChannel formSubmit={this._newChannelSubmit} onClose={() => this.setState({ showAddNewChannelLayer: false })} /> }
         </TplApp>
       </Fragment>
     )
